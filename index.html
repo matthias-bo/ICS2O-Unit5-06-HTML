@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Unit5-06 </title>
+    <meta charset="utf-8">
+    <meta name="description" content="My webpage">
+    <meta name="keywords" content="guessmyage">
+    <meta name="author" content="Matthias Bo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+    <h1>Can you guess my age?</h1>
+    <p1>Can you guess how old I am? If you think you know, put your guess in the box below!</p1>
+    <br>
+    <br>
+    <input type="text" id="agetyped">
+    <br>
+    <br>
+    <button id="userguess">Submit guess</button>
+    <script>
+    alert("Can you guess my age?");
+    document.getElementById("userguess").addEventListener("click", myfunction);
+    function myfunction() {
+    let ageguess;
+    let myage;
+    ageguess = document.getElementById("agetyped").value;
+    myage = 13;
+
+    if (ageguess == myage) {
+        alert ("You are correct! You are a great guesser!");
+    }
+    else if (ageguess > myage) {
+        alert ("I'm sorry, your guess is too high, please try again :(");
+    }
+    else if (ageguess < myage  && ageguess > 0) {
+        alert ("I'm sorry, your guess is too low, please try again :(");
+    }
+    else {
+        alert ("Please put a valid number");
+}
+}
+    </script>
+    </body>
+  </html>
